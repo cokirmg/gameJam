@@ -7,11 +7,13 @@ public class movimiento : MonoBehaviour
     // Start is called before the first frame update
     public float speed;
     private Rigidbody rb;
-    public float jumpforce = 10f;
+    public float jumpforce = 15f;
     public bool canJump;
+    private Animator anim;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
         speed = 5f;
     }
 
@@ -22,11 +24,16 @@ public class movimiento : MonoBehaviour
         {
 
             transform.position -= new Vector3(speed, 0f, 0f) * Time.deltaTime;
-
+            anim.SetBool("andado", true);
         }
         else if(Input.GetKey(KeyCode.D))
         {
             transform.position += new Vector3(speed, 0f, 0f) * Time.deltaTime;
+            anim.SetBool("andado", true);
+        }
+        else
+        {
+            anim.SetBool("andado", false);
         }
 
         if(Input.GetKeyDown(KeyCode.Space) && canJump)
@@ -46,7 +53,7 @@ public class movimiento : MonoBehaviour
             else
             {
                 canJump = false;
-                transform.position -= new Vector3(speed, 0f, 0f) * Time.deltaTime;
+                rb.AddForce(1f * Physics.gravity);
             }
         }
 
