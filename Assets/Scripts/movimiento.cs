@@ -10,6 +10,9 @@ public class movimiento : MonoBehaviour
     public float jumpforce = 15f;
     public bool canJump;
     private Animator anim;
+    public bool canCatch;
+    public bool catched;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -20,16 +23,37 @@ public class movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Ray ray = new Ray(transform.position, Vector3.down);
+        RaycastHit hit;
+        //RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.down);
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.distance < 1f)
+            {
+                canJump = true;
+            }
+            else
+            {
+                canJump = false;
+                rb.AddForce(1f * Physics.gravity);
+            }
+        }
+
+        
+
         if (Input.GetKey(KeyCode.A))
         {
 
             transform.position -= new Vector3(speed, 0f, 0f) * Time.deltaTime;
             anim.SetBool("andado", true);
+            
         }
         else if(Input.GetKey(KeyCode.D))
         {
             transform.position += new Vector3(speed, 0f, 0f) * Time.deltaTime;
             anim.SetBool("andado", true);
+            
         }
         else
         {
@@ -42,21 +66,33 @@ public class movimiento : MonoBehaviour
             rb.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
         }
 
-        Ray ray = new Ray(transform.position, Vector3.down);
-        RaycastHit hit;
-        //RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.down);
 
-        if (Physics.Raycast(ray, out hit))
-        {if (hit.distance < 1f) {
-                canJump = true;
-            }
-            else
-            {
-                canJump = false;
-                rb.AddForce(1f * Physics.gravity);
-            }
-        }
-
-    }
         
+        
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if ( collision.transform.CompareTag("canCatch"))
+        {
+            if (Input.GetKeyDown(KeyCode.E)) {
+                if (!catched)
+                {
+                    Debug.Log("puede coger");
+                    catched = true;
+                    collision.transform.position = this.transform.position;
+                }
+                else
+                {
+                    catched = false;
+                    collision.transform.SetParent(this.transform, false);
+                }
+            }
+            
+
+            
+            
+        }
+       
+    }
 }
