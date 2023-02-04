@@ -126,7 +126,7 @@ public class movimiento : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S) && liana)
         {
 
-           this.transform.SetParent(lianaObj.transform);
+           transform.SetParent(lianaObj.transform);
             rb.isKinematic = true;
             speed = 0f;
             liana = false;
@@ -134,7 +134,7 @@ public class movimiento : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.S) && !liana)
         {
 
-            this.transform.SetParent(null);
+            transform.SetParent(null);
             rb.isKinematic = false;
             speed = 8f;
             lianaObj = null;
