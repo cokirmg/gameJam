@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: f8f43ee4dbe9e8549879aea82ead830c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: semillas animaciones_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1766
+        width: 1071
+        height: 606
+      alignment: 9
+      pivot: {x: 0.61422676, y: 0.10236543}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2766c24a156fa874e847f7286ddc3e63
+      internalID: 53784011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_1
+      rect:
+        serializedVersion: 2
+        x: 2521
+        y: 82
+        width: 239
+        height: 1990
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7515f9edffb427f45857932dc7fc76b1
+      internalID: 1126071665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 644
+        width: 1134
+        height: 1090
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede949453a2fe6044978c925d4f2f7ec
+      internalID: -1535639556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 239
+        height: 630
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa33fbc86add1344ebcca29a93816008
+      internalID: 685939515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_4
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 332
+        height: 576
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e61a837170f7c5408372074c1639d2e
+      internalID: 901584037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_5
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 82
+        width: 515
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d870037a620aa4ca8c633d54733b1e
+      internalID: 1538781991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_6
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 82
+        width: 1094
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0d44c7dc76bf8488f349f33ec7c846
+      internalID: 323190255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_7
+      rect:
+        serializedVersion: 2
+        x: 2195
+        y: 82
+        width: 331
+        height: 494
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9936cdd3ffae7542b8046538896375a
+      internalID: 117052015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1767
+        width: 260
+        height: 605
+      alignment: 9
+      pivot: {x: 0.49041677, y: 0.09433735}
+      border: {x: 0, y: 41, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0152b63fffaf9364c97304730c30421d
+      internalID: 1005928243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_9
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1767
+        width: 261
+        height: 604
+      alignment: 9
+      pivot: {x: 0.49522674, y: 0.09572839}
+      border: {x: 0, y: 43, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e58cbe7d9cd3eb4eb8b84ff8aeb86e9
+      internalID: -2040077256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_10
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1767
+        width: 261
+        height: 605
+      alignment: 9
+      pivot: {x: 0.5047734, y: 0.09227809}
+      border: {x: 0, y: 41, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757ac7657c68ddb4daa566a1ca5be035
+      internalID: 2062308465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_11
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1767
+        width: 281
+        height: 605
+      alignment: 9
+      pivot: {x: 0.46009842, y: 0.112870045}
+      border: {x: 0, y: 42, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648853dd942afda439c2677ebcf3ff03
+      internalID: -367317597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1166
+        width: 281
+        height: 568
+      alignment: 9
+      pivot: {x: 0.497291, y: 0.13682814}
+      border: {x: 0, y: 53, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0784058930961d459306cd14326a98f
+      internalID: -1052354986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_13
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1167
+        width: 288
+        height: 566
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15287754}
+      border: {x: 0, y: 52, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b51c5124d4c7246a8fbb10936defd0
+      internalID: -543385534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_14
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 1166
+        width: 282
+        height: 569
+      alignment: 9
+      pivot: {x: 0.4842553, y: 0.15080617}
+      border: {x: 0, y: 52, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aedf0419da841f445a74bc9bdd29dfed
+      internalID: -1295670733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_15
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 1166
+        width: 281
+        height: 568
+      alignment: 9
+      pivot: {x: 0.49604988, y: 0.15996261}
+      border: {x: 0, y: 53, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ec444769894d143b18bff444bfd81d
+      internalID: -1024940873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 646
+        width: 227
+        height: 519
+      alignment: 9
+      pivot: {x: 0.49703667, y: 0.087816656}
+      border: {x: 0, y: 33, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b4606dd19dcd84eb54b67634e97847
+      internalID: 141224420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_17
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 646
+        width: 226
+        height: 519
+      alignment: 9
+      pivot: {x: 0.51308423, y: 0.10545052}
+      border: {x: 0, y: 33, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6eca29186f81942976ce38d4a971e2
+      internalID: -175084509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_18
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 644
+        width: 226
+        height: 520
+      alignment: 9
+      pivot: {x: 0.47212422, y: 0.10884975}
+      border: {x: 0, y: 35, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4463b4b7a518cca40adb93bfabda2e02
+      internalID: 1659128004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_19
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 644
+        width: 228
+        height: 519
+      alignment: 9
+      pivot: {x: 0.5039475, y: 0.10636205}
+      border: {x: 0, y: 34, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a5f2a5a33e7c845b124eb6bcd93d48
+      internalID: -1025943269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: semillas animaciones_20
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 646
+        width: 226
+        height: 519
+      alignment: 9
+      pivot: {x: 0.49203572, y: 0.09769141}
+      border: {x: 0, y: 34, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0ed9a608f70fd4cb556b07835e8813
+      internalID: 845662991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d89379b0d2e8af844bb745770f540cd4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      semillas animaciones_6: 323190255
+      semillas animaciones_4: 901584037
+      semillas animaciones_14: -1295670733
+      semillas animaciones_11: -367317597
+      semillas animaciones_18: 1659128004
+      semillas animaciones_12: -1052354986
+      semillas animaciones_9: -2040077256
+      semillas animaciones_8: 1005928243
+      semillas animaciones_10: 2062308465
+      semillas animaciones_13: -543385534
+      semillas animaciones_7: 117052015
+      semillas animaciones_15: -1024940873
+      semillas animaciones_16: 141224420
+      semillas animaciones_19: -1025943269
+      semillas animaciones_1: 1126071665
+      semillas animaciones_0: 53784011
+      semillas animaciones_5: 1538781991
+      semillas animaciones_2: -1535639556
+      semillas animaciones_17: -175084509
+      semillas animaciones_3: 685939515
+      semillas animaciones_20: 845662991
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
