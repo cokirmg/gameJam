@@ -21,7 +21,9 @@ public class movimiento : MonoBehaviour
 
     private GameObject grabbedObject;
     private int layerIndex;
+    public bool liana;
 
+    private GameObject lianaObj;
 
     void Start()
     {
@@ -29,6 +31,7 @@ public class movimiento : MonoBehaviour
         anim = GetComponent<Animator>();
         speed = 8f;
         layerIndex = LayerMask.NameToLayer("Objects");
+
     }
 
     // Update is called once per frame
@@ -120,9 +123,25 @@ public class movimiento : MonoBehaviour
             anim.SetBool("salto", false);
         }
 
+        if (Input.GetKeyDown(KeyCode.S) && liana)
+        {
 
-        
-        
+           this.transform.SetParent(lianaObj.transform);
+            rb.isKinematic = true;
+            speed = 0f;
+            liana = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.S) && !liana)
+        {
+
+            this.transform.SetParent(null);
+            rb.isKinematic = false;
+            speed = 8f;
+            lianaObj = null;
+
+        }
+
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -138,7 +157,13 @@ public class movimiento : MonoBehaviour
 
         if (collision.gameObject.tag == "liana")
         {
+            lianaObj = collision.gameObject;
+            liana = true;
             
+        }
+        else
+        {
+            liana = false;
         }
     }
 }

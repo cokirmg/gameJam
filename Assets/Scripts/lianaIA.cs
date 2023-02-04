@@ -17,10 +17,11 @@ public class lianaIA : MonoBehaviour
     {
         transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "waypoint1")
         {
+            Debug.Log("toca");
             speed = -3f;
         }
 
