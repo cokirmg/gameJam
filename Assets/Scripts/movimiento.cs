@@ -6,52 +6,92 @@ public class movimiento : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
-    private Rigidbody rb;
+    private Rigidbody2D rb;
     public float jumpforce = 15f;
     public bool canJump;
     private Animator anim;
-    public bool canCatch;
-    public bool catched;
     
+    [SerializeField]
+    private Transform grabPoint;
+    [SerializeField]
+    private Transform rayPoint;
+    [SerializeField]
+    private float rayDistance;
+
+    private GameObject grabbedObject;
+    private int layerIndex;
+
+
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = this.gameObject.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         speed = 5f;
+        layerIndex = LayerMask.NameToLayer("Objects");
     }
 
     // Update is called once per frame
     void Update()
     {
-        Ray ray = new Ray(transform.position, Vector3.down);
-        RaycastHit hit;
-        //RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.down);
-
-        if (Physics.Raycast(ray, out hit))
+        //Ray ray = new Ray(transform.position, Vector3.down);
+        //RaycastHit hit;
+        RaycastHit2D hit = Physics2D.Raycast(rayPoint.transform.position , -Vector3.up);
+        Debug.DrawRay(transform.position, Vector3.down * 4f, Color.red);
+        if (hit.collider != null)
         {
-            if (hit.distance < 1f)
+            Debug.Log("rayo");
+            
+               if(hit.distance < 4f)
+                {
+                    Debug.Log("rayo4f");
+                    canJump = true;
+                }
+                else
+                {
+                    Debug.Log("rayo>4f");
+                    canJump = false;
+                }
+
+            
+
+
+
+        }
+        
+        
+
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.right);
+        Debug.DrawRay(transform.position, Vector3.right * 4f, Color.green);
+        if (hitInfo.collider !=null && hitInfo.collider.gameObject.layer == layerIndex)
+        {
+            if (Input.GetKey(KeyCode.E) && grabbedObject == null)
             {
-                canJump = true;
+                grabbedObject = hitInfo.collider.gameObject;
+                grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                grabbedObject.transform.position = grabPoint.position;
+                grabbedObject.transform.SetParent(transform);
             }
-            else
-            {
-                canJump = false;
-                rb.AddForce(1f * Physics.gravity);
-            }
+            else if(Input.GetKey(KeyCode.E)&& grabbedObject != null)
+                {
+                    grabbedObject.GetComponent<Rigidbody2D>().isKinematic = false;
+                    grabbedObject.transform.SetParent(null);
+                    grabbedObject = null;
+                }
         }
 
-        
 
         if (Input.GetKey(KeyCode.A))
         {
 
             transform.position -= new Vector3(speed, 0f, 0f) * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             anim.SetBool("andado", true);
             
         }
         else if(Input.GetKey(KeyCode.D))
         {
             transform.position += new Vector3(speed, 0f, 0f) * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             anim.SetBool("andado", true);
             
         }
@@ -63,7 +103,9 @@ public class movimiento : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && canJump)
         {
             
-            rb.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
+            rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
+            
+
         }
 
 
@@ -71,28 +113,5 @@ public class movimiento : MonoBehaviour
         
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if ( collision.transform.CompareTag("canCatch"))
-        {
-            if (Input.GetKeyDown(KeyCode.E)) {
-                if (!catched)
-                {
-                    Debug.Log("puede coger");
-                    catched = true;
-                    collision.transform.position = this.transform.position;
-                }
-                else
-                {
-                    catched = false;
-                    collision.transform.SetParent(this.transform, false);
-                }
-            }
-            
-
-            
-            
-        }
-       
-    }
+    
 }
