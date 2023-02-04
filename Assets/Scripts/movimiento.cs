@@ -125,5 +125,20 @@ public class movimiento : MonoBehaviour
         
     }
 
-    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "faster")
+        {
+            speed = 14f;
+        }
+        else
+        {
+            speed = 8f;
+        }
+
+        if (collision.gameObject.tag == "liana")
+        {
+            
+        }
+    }
 }
