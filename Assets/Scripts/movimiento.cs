@@ -36,12 +36,12 @@ public class movimiento : MonoBehaviour
         //Ray ray = new Ray(transform.position, Vector3.down);
         //RaycastHit hit;
         RaycastHit2D hit = Physics2D.Raycast(rayPoint.transform.position , -Vector3.up);
-        Debug.DrawRay(transform.position, Vector3.down * 4f, Color.red);
+        Debug.DrawRay(rayPoint.transform.position, Vector3.down * 2f, Color.red);
         if (hit.collider != null)
         {
             Debug.Log("rayo");
             
-               if(hit.distance < 4f)
+               if(hit.distance < 2f)
                 {
                     Debug.Log("rayo4f");
                     canJump = true;
@@ -60,23 +60,29 @@ public class movimiento : MonoBehaviour
         
         
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.right);
-        Debug.DrawRay(transform.position, Vector3.right * 4f, Color.green);
-        if (hitInfo.collider !=null && hitInfo.collider.gameObject.layer == layerIndex)
+        RaycastHit2D hitInfo = Physics2D.Raycast(rayPoint.transform.position, Vector3.right);
+        Debug.DrawRay(rayPoint.transform.position, Vector3.right , Color.green);
+        if (hitInfo.collider !=null )
         {
-            if (Input.GetKey(KeyCode.E) && grabbedObject == null)
+            if (hitInfo.distance < 1f)
             {
-                grabbedObject = hitInfo.collider.gameObject;
-                grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
-                grabbedObject.transform.position = grabPoint.position;
-                grabbedObject.transform.SetParent(transform);
-            }
-            else if(Input.GetKey(KeyCode.E)&& grabbedObject != null)
+                Debug.Log("Detecto algo 4f");
+                if (Input.GetKeyDown(KeyCode.E) && grabbedObject == null)
+                {
+                    Debug.Log("presiono e = null");
+                    grabbedObject = hitInfo.collider.gameObject;
+                    grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                    grabbedObject.transform.position = grabPoint.position;
+                    grabbedObject.transform.SetParent(transform);
+                }
+                else if (Input.GetKeyDown(KeyCode.E) && grabbedObject != null)
                 {
                     grabbedObject.GetComponent<Rigidbody2D>().isKinematic = false;
                     grabbedObject.transform.SetParent(null);
                     grabbedObject = null;
                 }
+            }
+            
         }
 
 
@@ -102,10 +108,14 @@ public class movimiento : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space) && canJump)
         {
-            
+            anim.SetBool("salto", true);
             rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
             
 
+        }
+        else
+        {
+            anim.SetBool("salto", false);
         }
 
 
