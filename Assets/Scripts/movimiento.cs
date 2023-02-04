@@ -10,7 +10,8 @@ public class movimiento : MonoBehaviour
     public float jumpforce = 15f;
     public bool canJump;
     private Animator anim;
-    
+    public GameObject camara;
+
     [SerializeField]
     private Transform grabPoint;
     [SerializeField]
@@ -33,6 +34,7 @@ public class movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //Ray ray = new Ray(transform.position, Vector3.down);
         //RaycastHit hit;
         RaycastHit2D hit = Physics2D.Raycast(rayPoint.transform.position , -Vector3.up);
