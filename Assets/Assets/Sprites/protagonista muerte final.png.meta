@@ -40,10 +40,10 @@ TextureImporter:
     wrapU: 0
     wrapV: 0
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -54,7 +54,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -117,18 +117,106 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: protagonista muerte final_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 300
+        height: 640
+      alignment: 9
+      pivot: {x: 0.5135387, y: 0.13961837}
+      border: {x: 0, y: 60, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde9a0c2bda34b641bda707655343248
+      internalID: 2029529556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protagonista muerte final_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 480
+        height: 540
+      alignment: 9
+      pivot: {x: 0.5, y: 0.16359325}
+      border: {x: 0, y: 61, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488f256e9ec0751429f1dc2e944c423e
+      internalID: 1114726502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protagonista muerte final_2
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 480
+        height: 561
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14479947}
+      border: {x: 0, y: 61, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd4e0406b9d99846962fa541a81ef12
+      internalID: 1816843773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protagonista muerte final_3
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 0
+        width: 479
+        height: 520
+      alignment: 9
+      pivot: {x: 0.50423956, y: 0.15241869}
+      border: {x: 0, y: 60, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84eaa3f2dc5aca94db4b933ad3c24aa9
+      internalID: 1902247761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e2ed12d5cb0c09e4389937fb9d28fe99
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      protagonista muerte final_2: 1816843773
+      protagonista muerte final_3: 1902247761
+      protagonista muerte final_0: 2029529556
+      protagonista muerte final_1: 1114726502
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
