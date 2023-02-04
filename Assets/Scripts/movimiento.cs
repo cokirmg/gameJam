@@ -26,7 +26,7 @@ public class movimiento : MonoBehaviour
     {
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        speed = 5f;
+        speed = 8f;
         layerIndex = LayerMask.NameToLayer("Objects");
     }
 
