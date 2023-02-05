@@ -7,8 +7,7 @@ public class followCamara : MonoBehaviour
     public GameObject personaje;
     private Vector3 posicionRelativa;
 
-    public Transform moverArriba;
-    public followCamara f;
+    
     public int speed = -3;
 
     public bool moverCamara;
@@ -32,13 +31,13 @@ public class followCamara : MonoBehaviour
         }
         else
         {
-            if (transform.position.y > -10f && !abajo)
+            if (transform.position.y > -325f && !abajo)
             {
-                transform.position += new Vector3(0, -3f,-10f) * Time.deltaTime;
+                transform.position += new Vector3(0, -40f,-10f) * Time.deltaTime;
             }
             else
             {
-                transform.position = Vector3.MoveTowards(transform.position,personaje.transform.position, Time.deltaTime * speed);
+                transform.position = Vector3.MoveTowards(transform.position,personaje.transform.position, Time.deltaTime * 50f);
                 abajo = true;
                 if (transform.position == personaje.transform.position)
                 {
