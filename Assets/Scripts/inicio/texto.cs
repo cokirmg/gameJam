@@ -12,6 +12,8 @@ public class texto : MonoBehaviour
 
     private int index;
 
+    public string stringName;
+
     void Start()
     {
         textComponent.text = string.Empty;
@@ -59,7 +61,7 @@ public class texto : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(stringName);
         }
     }
 }

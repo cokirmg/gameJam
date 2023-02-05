@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/narrativa.unity
     guid: 9f0db239074eae94c99db9eadbb9f524
   - enabled: 1
+    path: Assets/Scenes/creditos.unity
+    guid: 101e60aed6bcd7d40af0fd468815e09b
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
