@@ -30,7 +30,7 @@ public class spawnSemillas : MonoBehaviour
     IEnumerator spawn()
     {
         canSpawn = false;
-        Instantiate(semilla, new Vector3(4.1f, -1.77f, 0), Quaternion.identity);
+        Instantiate(semilla, new Vector3(-12.8f, -60.64655f, 0.0356013f), Quaternion.identity);
         yield return new WaitForSeconds(2);
         canSpawn = true;
     }
