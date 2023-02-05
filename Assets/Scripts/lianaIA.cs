@@ -8,7 +8,7 @@ public class lianaIA : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 3f;
+        speed = 5f;
         transform.position += new Vector3(3f, 0, 0) * Time.deltaTime;
     }
 

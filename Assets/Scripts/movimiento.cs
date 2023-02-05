@@ -7,7 +7,7 @@ public class movimiento : MonoBehaviour
     // Start is called before the first frame update
     public float speed;
     private Rigidbody2D rb;
-    public float jumpforce = 20f;
+    public float jumpforce = 35f;
     public bool canJump;
     private Animator anim;
     public GameObject camara;
