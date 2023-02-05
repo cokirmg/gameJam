@@ -803,6 +803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prota
       objectReference: {fileID: 0}
+    - target: {fileID: 4008669598020799789, guid: d48747067e5438f49b2c8ca8511ad021, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4008669598020799791, guid: d48747067e5438f49b2c8ca8511ad021, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -817,7 +821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4008669598020799791, guid: d48747067e5438f49b2c8ca8511ad021, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.69
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4008669598020799791, guid: d48747067e5438f49b2c8ca8511ad021, type: 3}
       propertyPath: m_LocalRotation.w

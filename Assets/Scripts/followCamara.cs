@@ -34,7 +34,7 @@ public class followCamara : MonoBehaviour
         {
             if (transform.position.y > -10f && !abajo)
             {
-                transform.position += new Vector3(0, -3f, 0) * Time.deltaTime;
+                transform.position += new Vector3(0, -3f,-10f) * Time.deltaTime;
             }
             else
             {
