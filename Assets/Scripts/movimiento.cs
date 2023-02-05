@@ -14,6 +14,7 @@ public class movimiento : MonoBehaviour
 
     [SerializeField]
     private Transform grabPoint;
+    private Transform grabPointPara;
     [SerializeField]
     private Transform rayPoint;
     [SerializeField]
@@ -75,14 +76,26 @@ public class movimiento : MonoBehaviour
                 Debug.Log("Detecto algo 4f");
                 if (Input.GetKeyDown(KeyCode.E) && grabbedObject == null)
                 {
-                    Debug.Log("presiono e = null");
-                    grabbedObject = hitInfo.collider.gameObject;
-                    grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
-                    grabbedObject.transform.position = grabPoint.position;
-                    grabbedObject.transform.SetParent(transform);
+                    
+
+
                             if(grabbedObject.transform.CompareTag("paracaidas"))
                                 {
+                                    Debug.Log("presiono e = null");
+                                    grabbedObject = hitInfo.collider.gameObject;
+                                    grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                                    grabbedObject.transform.position = grabPointPara.position;
+                                    grabbedObject.transform.SetParent(transform);
                                     rb.gravityScale = 1f;
+                                }
+                            else if(grabbedObject.transform.CompareTag("canCatch"))
+                                {
+                                        Debug.Log("presiono e = null");
+                                        grabbedObject = hitInfo.collider.gameObject;
+                                        grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                                        grabbedObject.transform.position = grabPoint.position;
+                                        grabbedObject.transform.SetParent(transform);
+                                        rb.gravityScale = 1f;
                                 }
                 }
                 else if (Input.GetKeyDown(KeyCode.E) && grabbedObject != null)
