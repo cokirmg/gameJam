@@ -20,6 +20,7 @@ public class movimiento : MonoBehaviour
     private float rayDistance;
 
     private GameObject grabbedObject;
+    public GameObject spawn;
     private int layerIndex;
     public bool liana;
 
@@ -79,12 +80,17 @@ public class movimiento : MonoBehaviour
                     grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
                     grabbedObject.transform.position = grabPoint.position;
                     grabbedObject.transform.SetParent(transform);
+                            if(grabbedObject.transform.CompareTag("paracaidas"))
+                                {
+                                    rb.gravityScale = 1f;
+                                }
                 }
                 else if (Input.GetKeyDown(KeyCode.E) && grabbedObject != null)
                 {
                     grabbedObject.GetComponent<Rigidbody2D>().isKinematic = false;
                     grabbedObject.transform.SetParent(null);
                     grabbedObject = null;
+                    rb.gravityScale = 4f;
                 }
             }
             
@@ -165,5 +171,26 @@ public class movimiento : MonoBehaviour
         {
             liana = false;
         }
+
+        if (collision.gameObject.tag == "enemigo")
+        {
+            transform.position = spawn.transform.position;
+        }
     }
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+        Debug.Log("trigger");
+        if (col.transform.CompareTag("vientoTOR"))
+        {
+            Debug.Log("if");
+            transform.position += new Vector3(3f, 0f, 0f) * Time.deltaTime;
+        }
+
+        if (col.gameObject.CompareTag ( "vientoTOL"))
+        {
+            transform.position += new Vector3(-3f, 0, 0) * Time.deltaTime;
+        }
+    }
+    
 }

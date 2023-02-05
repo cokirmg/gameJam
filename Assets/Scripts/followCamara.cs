@@ -10,6 +10,7 @@ public class followCamara : MonoBehaviour
     void Start()
     {
         posicionRelativa = transform.position - personaje.transform.position;
+        this.transform.position = personaje.transform.position;
     }
 
     // Update is called once per frame
