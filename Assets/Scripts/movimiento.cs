@@ -17,6 +17,8 @@ public class movimiento : MonoBehaviour
     private Transform grabPointPara;
     [SerializeField]
     private Transform rayPoint;
+    public Transform rayPointCatch;
+
     [SerializeField]
     private float rayDistance;
 
@@ -33,6 +35,7 @@ public class movimiento : MonoBehaviour
         anim = GetComponent<Animator>();
         speed = 8f;
         layerIndex = LayerMask.NameToLayer("Objects");
+        grabbedObject = null;
 
     }
 
@@ -48,7 +51,7 @@ public class movimiento : MonoBehaviour
         {
             Debug.Log("rayo");
             
-               if(hit.distance < 2f)
+               if(hit.distance < 1f)
                 {
                     Debug.Log("rayo4f");
                     canJump = true;
@@ -67,48 +70,39 @@ public class movimiento : MonoBehaviour
         
         
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(rayPoint.transform.position, Vector3.right);
-        Debug.DrawRay(rayPoint.transform.position, Vector3.right , Color.green);
+        RaycastHit2D hitInfo = Physics2D.Raycast(rayPointCatch.transform.position, Vector3.right);
+        Debug.DrawRay(rayPointCatch.transform.position, Vector3.right , Color.green);
         if (hitInfo.collider !=null )
         {
             if (hitInfo.distance < 1f)
             {
                 Debug.Log("Detecto algo 4f");
-                if (Input.GetKeyDown(KeyCode.E) && grabbedObject == null)
+                if (Input.GetKeyDown(KeyCode.E) && grabbedObject == null &&hitInfo.transform.CompareTag("canCatch"))
                 {
                     
 
-
-                            if(grabbedObject.transform.CompareTag("paracaidas"))
-                                {
-                                    Debug.Log("presiono e = null");
-                                    grabbedObject = hitInfo.collider.gameObject;
-                                    grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
-                                    grabbedObject.transform.position = grabPointPara.position;
-                                    grabbedObject.transform.SetParent(transform);
-                                    rb.gravityScale = 1f;
-                                }
-                            else if(grabbedObject.transform.CompareTag("canCatch"))
-                                {
+                                        
+                            
                                         Debug.Log("presiono e = null");
                                         grabbedObject = hitInfo.collider.gameObject;
                                         grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
                                         grabbedObject.transform.position = grabPoint.position;
                                         grabbedObject.transform.SetParent(transform);
-                                        rb.gravityScale = 1f;
-                                }
+                                        
+                                
                 }
-                else if (Input.GetKeyDown(KeyCode.E) && grabbedObject != null)
-                {
-                    grabbedObject.GetComponent<Rigidbody2D>().isKinematic = false;
-                    grabbedObject.transform.SetParent(null);
-                    grabbedObject = null;
-                    rb.gravityScale = 4f;
-                }
+                
             }
             
         }
 
+        if (Input.GetKeyDown(KeyCode.R) && grabbedObject != null)
+        {
+            grabbedObject.GetComponent<Rigidbody2D>().isKinematic = false;
+            grabbedObject.transform.SetParent(null);
+            grabbedObject = null;
+            
+        }
 
         if (Input.GetKey(KeyCode.A))
         {
