@@ -10,6 +10,8 @@ public class video : MonoBehaviour
     public CanvasGroup grupo;
     public bool subeFade;
 
+    public int seconds;
+
     private void Start()
     {
         StartCoroutine(Contador());
@@ -31,7 +33,7 @@ public class video : MonoBehaviour
     {
         subeFade = false;
         
-        yield return new WaitForSeconds(24f);
+        yield return new WaitForSeconds(seconds);
         subeFade = true;
     }
 

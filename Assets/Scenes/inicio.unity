@@ -1198,6 +1198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grupo: {fileID: 408144767}
   subeFade: 0
+  seconds: 24
 --- !u!4 &1626112833
 Transform:
   m_ObjectHideFlags: 0
